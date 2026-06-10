@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KPRIET Portal Login</title>
     <style>
-        /* 1. Global Setup */
+        /* 1. Reset defaults and choose a clean font family */
         * {
             margin: 0;
             padding: 0;
@@ -13,42 +13,45 @@
             font-family: 'Segoe UI', system-ui, sans-serif;
         }
 
-        /* 2. Absolute Screen Centering */
+        /* 2. Absolute Screen Centering Layout */
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            display: flex;           /* Activates flexbox container tools */
+            justify-content: center; /* Centers the portal card horizontally (left to right) */
+            align-items: center;     /* Centers the portal card vertically (top to bottom) */
+            min-height: 100vh;       /* Forces the body to match the full height of the viewport */
             background: linear-gradient(135deg, #f4f7fc 0%, #e2eaf4 100%);
             padding: 20px;
         }
 
-        /* 3. Main Login Portal Card Box */
+        /* 3. Login Box Panel Styling */
         .login-card {
             background: #ffffff;
             width: 100%;
             max-width: 400px;
             padding: 2.5rem 2rem;
             border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(11, 37, 69, 0.1);
+            box-shadow: 0 10px 30px rgba(11, 37, 69, 0.08);
             text-align: center;
         }
 
-        /* 4. Logo Adjustments */
+        /* 4. Centered Logo Box */
         .logo-box {
             margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: center;
         }
 
         .college-logo {
-            max-width: 200px;
+            max-width: 190px;
             height: auto;
         }
 
-        /* 5. Headings */
+        /* 5. Typography */
         h2 {
-            color: #0b2545; /* Dark Blue from KPR Logo */
+            color: #0b2545; /* Signature deep blue from the KPR typography */
             font-size: 1.4rem;
             margin-bottom: 0.25rem;
+            font-weight: 700;
         }
 
         .subtitle {
@@ -57,7 +60,7 @@
             margin-bottom: 2rem;
         }
 
-        /* 6. Form Field Styles */
+        /* 6. Form Input Elements */
         .input-group {
             text-align: left;
             margin-bottom: 1.25rem;
@@ -82,13 +85,13 @@
             transition: all 0.2s ease;
         }
 
-        /* Green accent glow on clicking inputs */
+        /* Green accent border glow mimicking the leaf symbol on input selection */
         input:focus {
             border-color: #2ea44f; 
             box-shadow: 0 0 0 3px rgba(46, 164, 79, 0.15);
         }
 
-        /* 7. Utilities & Extras */
+        /* 7. Utilities & Layout Extras */
         .form-options {
             display: flex;
             justify-content: space-between;
@@ -115,58 +118,6 @@
             text-decoration: underline;
         }
 
-        /* 8. Action Login Button */
+        /* 8. Corporate Blue Brand Button */
         .login-btn {
             width: 100%;
-            padding: 0.85rem;
-            background-color: #0b2545; /* Brand Blue */
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .login-btn:hover {
-            background-color: #133966;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="login-card">
-        
-        <div class="logo-box">
-            <img src="download.jpg" alt="KPR Institute of Engineering and Technology" class="college-logo">
-        </div>
-
-        <h2>Academic Portal</h2>
-        <p class="subtitle">Sign in to access your dashboard</p>
-
-        <form>
-            <div class="input-group">
-                <label for="username">Roll Number / Email</label>
-                <input type="text" id="username" placeholder="Enter your ID" required>
-            </div>
-
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your password" required>
-            </div>
-
-            <div class="form-options">
-                <label class="remember-me">
-                    <input type="checkbox"> Remember me
-                </label>
-                <a href="#" class="forgot-link">Forgot Password?</a>
-            </div>
-
-            <button type="submit" class="login-btn">Login</button>
-        </form>
-
-    </div>
-
-</body>
-</html>
